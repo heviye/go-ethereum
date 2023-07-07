@@ -287,6 +287,23 @@ var (
 			BlockNumber:       blockNumber,
 			TransactionIndex:  6,
 		},
+		&Receipt{
+			Type:              BlobTxType,
+			PostState:         common.Hash{7}.Bytes(),
+			CumulativeGasUsed: 28,
+			Logs:              []*Log{},
+			// derived fields:
+			TxHash:            txs[6].Hash(),
+			GasUsed:           7,
+			EffectiveGasPrice: big.NewInt(1077),
+			BlockHash:         blockHash,
+			BlockNumber:       blockNumber,
+			TransactionIndex:  6,
+			L1Fee:             big.NewInt(10000000),
+			L1FeeScalar:       1,
+			L1GasPrice:        big.NewInt(100000),
+			L1GasUsed:         100,
+		},
 	}
 )
 
