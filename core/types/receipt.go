@@ -71,7 +71,7 @@ type Receipt struct {
 	TransactionIndex uint        `json:"transactionIndex"`
 
 	L1Fee       *big.Int `json:"l1Fee,omitempty"`
-	L1FeeScalar uint     `json:"l1FeeScalar,omitempty"`
+	L1FeeScalar string   `json:"l1FeeScalar,omitempty"`
 	L1GasPrice  *big.Int `json:"l1GasPrice,omitempty"`
 	L1GasUsed   uint64   `json:"l1GasUsed,omitempty"`
 }

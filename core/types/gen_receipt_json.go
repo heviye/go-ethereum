@@ -30,7 +30,7 @@ func (r Receipt) MarshalJSON() ([]byte, error) {
 		BlockNumber       *hexutil.Big   `json:"blockNumber,omitempty"`
 		TransactionIndex  hexutil.Uint   `json:"transactionIndex"`
 		L1Fee             *hexutil.Big   `json:"l1Fee,omitempty"`
-		L1FeeScalar       uint           `json:"l1FeeScalar,omitempty"`
+		L1FeeScalar       string         `json:"l1FeeScalar,omitempty"`
 		L1GasPrice        *hexutil.Big   `json:"l1GasPrice,omitempty"`
 		L1GasUsed         hexutil.Uint64 `json:"l1GasUsed,omitempty"`
 	}
@@ -72,7 +72,7 @@ func (r *Receipt) UnmarshalJSON(input []byte) error {
 		BlockNumber       *hexutil.Big    `json:"blockNumber,omitempty"`
 		TransactionIndex  *hexutil.Uint   `json:"transactionIndex"`
 		L1Fee             *hexutil.Big    `json:"l1Fee,omitempty"`
-		L1FeeScalar       *uint           `json:"l1FeeScalar,omitempty"`
+		L1FeeScalar       *string         `json:"l1FeeScalar,omitempty"`
 		L1GasPrice        *hexutil.Big    `json:"l1GasPrice,omitempty"`
 		L1GasUsed         *hexutil.Uint64 `json:"l1GasUsed,omitempty"`
 	}
